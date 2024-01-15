@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>guess awesome</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <div class="header">
+          <button class="btn" again-btn>Again!</button>
+          <span>(between 1 to 20)</span>
+        </div>
+        <h2>Guess My Number!</h2>
+        <div class="unknown-number">?</div>
+        <div class="content">
+          <div class="check-number">
+            <input type="number" class="guess" />
+            <button class="btn" check-btn>Check!</button>
+          </div>
+          <div class="winner-section">
+            <p class="message">Start guessing......</p>
+            <p class="label-score">💯Score: <span class="Score">20</span></p>
+            <p class="label-highscore">
+              🥇 Highscore: <span class="highscore">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+</html>
