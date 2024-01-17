@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@
 }
 
 #wrapper {
-  font-family: 'Lemon', serif;
+  font-family: "Lemon", serif;
   background-color: var(--background-color);
   height: 100vh;
   color: var(--color);
@@ -34,6 +34,10 @@
   box-shadow: 0 0 1rem 0 rgba(255, 255, 255, 0.5);
   justify-content: center;
   /* margin: 0 auto; */
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 98%;
+  }
 }
 
 .header {
@@ -44,6 +48,9 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 480px) {
+  }
 }
 
 .btn {
@@ -51,8 +58,11 @@
   border: none;
   background-color: blanchedalmond;
   border-radius: 1em;
-  font-family: 'Lemon', serif;
+  font-family: "Lemon", serif;
   font-size: 1.2em;
+  @media (max-width: 480px) {
+    font-size: 1em;
+  }
 }
 .btn:hover {
   cursor: pointer;
@@ -68,6 +78,12 @@ h2 {
   display: flex;
   font-size: 3em;
   justify-content: center;
+
+  @media (max-width: 480px) {
+    font-size: 2em;
+
+    text-align: center;
+  }
 }
 
 .unknown-number {
@@ -83,6 +99,10 @@ h2 {
   width: 1.5em;
   border-radius: 0.5em;
   border: 1px solid blanchedalmond;
+
+  @media (max-width: 480px) {
+    font-size: 4em;
+  }
 }
 
 .content {
@@ -91,6 +111,10 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 40em;
+
+  @media (max-width: 480px) {
+    gap: 5em;
+  }
 }
 
 .check-number {
@@ -110,6 +134,10 @@ h2 {
   border: none;
   width: 10vw;
   border: 2px solid blanchedalmond;
+
+  @media (max-width: 480px) {
+    width: 35vw;
+  }
 }
 
 .winner-section {
@@ -117,6 +145,10 @@ h2 {
   flex-direction: column;
   gap: 1em;
   font-size: 1.6em;
+
+  @media (max-width: 480px) {
+    font-size: 1.2em;
+  }
 }
 
 @media (max-width: 750px) {
