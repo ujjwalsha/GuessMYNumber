@@ -6,12 +6,15 @@ let messageDisplay = document.querySelector(".message");
 let guessNumber = document.querySelector(".guess");
 let unknownNumber = document.querySelector(".unknown-number");
 let container = document.querySelector(".container");
-let wrapper = document.getElementById("wrapper");
+let wrapper = document.querySelector(".wrapper");
 let scoreDisplay = document.querySelector(".Score");
 let highScore = document.querySelector(".highscore");
+const checkbox = document.querySelector(".check");
+const moon = document.querySelector(".fa-sun");
+
 //random number
 function randomNumber() {
-  return Math.trunc(Math.random() * 20);
+  return Math.trunc(Math.random() * 50);
 }
 // console.log(randomNumber());
 
@@ -71,7 +74,7 @@ againBtn.addEventListener("click", function () {
 });
 
 document.addEventListener("keydown", function (e) {
-  console.log(e);
+  // console.log(e);
 
   if (e.keyCode == 13) {
     checkGuesses();
@@ -84,3 +87,34 @@ document.addEventListener("keydown", function (e) {
 });
 
 guessNumber.value = "";
+
+moon.classList.add("fa-moon");
+container.style.color = "#222";
+let cnt = 0;
+checkBtn.style.backgroundColor = "#262a33";
+checkBtn.style.color = "blanchedalmond";
+againBtn.style.backgroundColor = "#262a33";
+againBtn.style.color = "blanchedalmond";
+
+checkbox.addEventListener("click", function () {
+  console.log("hello");
+  moon.classList.toggle("fa-moon");
+  wrapper.classList.toggle("color");
+  container.classList.toggle("color");
+
+  cnt++;
+  console.log(cnt);
+  if (cnt % 2 == 0) {
+    container.style.color = "#222";
+    checkBtn.style.backgroundColor = "#262a33";
+    checkBtn.style.color = "blanchedalmond";
+    againBtn.style.backgroundColor = "#262a33";
+    againBtn.style.color = "blanchedalmond";
+  } else {
+    container.style.color = "blanchedalmond";
+    checkBtn.style.backgroundColor = "blanchedalmond";
+    checkBtn.style.color = "#222";
+    againBtn.style.backgroundColor = "blanchedalmond";
+    againBtn.style.color = "#222";
+  }
+});
