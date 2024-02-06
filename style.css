@@ -65,6 +65,10 @@
   border: 2px solid #333;
   width: 5em;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
 
 .check i {
